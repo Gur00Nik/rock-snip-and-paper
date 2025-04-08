@@ -1,0 +1,122 @@
+body,
+h1,
+h2,
+h3,
+p,
+input {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+h1.text {
+  font-size: 20px;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-choice-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.choice-container {
+  display: flex;
+  gap: 30px;
+}
+.computer-choice-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.choice-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-choice {
+  font-weight: bolder;
+}
+
+.computer-choice {
+  font-weight: bolder;
+}
+
+.result {
+  font-weight: bolder;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.btn-play {
+  width: 150px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.btn-play:hover {
+  transform: scale(1.2);
+  background-color: chartreuse;
+}
+
+.start-game {
+  width: 150px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.start-game:hover {
+  transform: scale(1.2);
+  background-color: chartreuse;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .choice-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-container">
+          <h1>Добро пожаловать в игру Камень, Ножницы, Бумага</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <button class="start-game">Начать игру</button>
+        <div class="main-container">
+          <div class="user-choice-container">
+            <h2>Выберете свой вариант</h2>
+            <div class="choice-container">
+              <div class="choice-item">
+                <label for="paper">Бумага</label
+                ><input
+                  type="radio"
+                  id="paper"
+                  name="user-choice"
+                  value="Бумага"
+                  disabled
+                />
+              </div>
+              <div class="choice-item">
+                <label for="snip">Ножницы</label
+                ><input
+                  type="radio"
+                  id="snip"
+                  name="user-choice"
+                  value="Ножницы"
+                  disabled
+                />
+              </div>
+              <div class="choice-item">
+                <label for="rock">Камень</label
+                ><input
+                  type="radio"
+                  id="rock"
+                  name="user-choice"
+                  value="Камень"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="choice-item">
+              <h3>Ваш выбор:</h3>
+              <p class="user-choice"></p>
+            </div>
+
+            <button class="btn-play" disabled>Сыграем</button>
+          </div>
+          <div class="computer-choice-container">
+            <div class="choice-item">
+              <h3>Выбор компьютера:</h3>
+              <p class="computer-choice"></p>
+            </div>
+            <div class="choice-item">
+              <h3>Результат игры:</h3>
+              <p class="result"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
