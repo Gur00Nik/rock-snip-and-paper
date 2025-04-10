@@ -37,7 +37,11 @@ ALL_CHOICE_ITEM.forEach((choice) => {
 });
 
 const selectColorText = (field, color) => {
-  field.classList.toggle(color);
+  field.classList.add(color);
+};
+
+const deleteColorText = (field, color) => {
+  field.classList.remove(color);
 };
 
 const renderText = (field, value) => {
@@ -84,8 +88,14 @@ const calcResult = () => {
   ) {
     result = "Победил Компьютер";
     selectColorText(FIELD_RESULT, "red");
+    deleteColorText(FIELD_RESULT, "magenta");
+    deleteColorText(FIELD_RESULT, "green");
     selectColorText(FIELD_COMPUTER_CHOICE, "green");
+    deleteColorText(FIELD_COMPUTER_CHOICE, "magenta");
+    deleteColorText(FIELD_COMPUTER_CHOICE, "red");
     selectColorText(FIELD_USER_CHOICE, "red");
+    deleteColorText(FIELD_USER_CHOICE, "magenta");
+    deleteColorText(FIELD_USER_CHOICE, "green");
   } else if (
     (userChoice === "Бумага" && computerChoice === "Камень") ||
     (userChoice === "Камень" && computerChoice === "Ножницы") ||
@@ -93,13 +103,25 @@ const calcResult = () => {
   ) {
     result = "Победил игрок";
     selectColorText(FIELD_RESULT, "green");
+    deleteColorText(FIELD_RESULT, "red");
+    deleteColorText(FIELD_RESULT, "magenta");
     selectColorText(FIELD_COMPUTER_CHOICE, "red");
+    deleteColorText(FIELD_COMPUTER_CHOICE, "magenta");
+    deleteColorText(FIELD_COMPUTER_CHOICE, "green");
     selectColorText(FIELD_USER_CHOICE, "green");
+    deleteColorText(FIELD_USER_CHOICE, "magenta");
+    deleteColorText(FIELD_USER_CHOICE, "red");
   } else {
     result = "Ничья";
-    selectColorText(FIELD_RESULT, "yellow");
-    selectColorText(FIELD_COMPUTER_CHOICE, "yellow");
-    selectColorText(FIELD_USER_CHOICE, "yellow");
+    selectColorText(FIELD_RESULT, "magenta");
+    deleteColorText(FIELD_RESULT, "red");
+    deleteColorText(FIELD_RESULT, "green");
+    selectColorText(FIELD_COMPUTER_CHOICE, "magenta");
+    deleteColorText(FIELD_COMPUTER_CHOICE, "green");
+    deleteColorText(FIELD_COMPUTER_CHOICE, "red");
+    selectColorText(FIELD_USER_CHOICE, "magenta");
+    deleteColorText(FIELD_USER_CHOICE, "red");
+    deleteColorText(FIELD_USER_CHOICE, "green");
   }
 
   renderText(FIELD_RESULT, result);
